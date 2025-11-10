@@ -23,7 +23,6 @@
             overflow-x: hidden;
         }
 
-        /* Estrellas de fondo */
         .stars {
             position: fixed;
             top: 0;
@@ -48,7 +47,6 @@
             50% { opacity: 1; }
         }
 
-        /* Pantalla de carga inicial */
         .loading-screen {
             position: fixed;
             top: 0;
@@ -68,7 +66,6 @@
             pointer-events: none;
         }
 
-        /* EXPLOSIÓN INSTANTÁNEA Y MUY VISIBLE */
         .explosion-flash {
             position: fixed;
             top: 50%;
@@ -117,7 +114,6 @@
             }
         }
 
-        /* Partículas ULTRA GRANDES Y VISIBLES */
         .explosion-particle {
             position: fixed;
             font-size: 80px;
@@ -131,7 +127,6 @@
                          0 0 60px rgba(100, 180, 255, 1);
         }
 
-        /* ANIMACIONES SUAVES Y ROMÁNTICAS */
         @keyframes fastExplode {
             0% {
                 transform: translate(0, 0) scale(0.5) rotate(0deg);
@@ -189,12 +184,10 @@
             animation: slowExplode 3.5s ease-in-out forwards;
         }
 
-        /* Partículas con tamaño más romántico */
         .explosion-particle {
             font-size: 60px;
         }
 
-        /* Pantalla de entrada */
         .intro-screen {
             display: none;
             flex-direction: column;
@@ -326,7 +319,6 @@
             }
         }
 
-        /* Pantalla principal */
         .main-content {
             display: none;
             width: 100%;
@@ -406,7 +398,6 @@
             }
         }
 
-        /* VIDEO CONTAINER - MÁS PEQUEÑO CON DIFUMINADO */
         .video-container {
             margin: 30px auto;
             max-width: 600px;
@@ -418,7 +409,6 @@
             position: relative;
         }
 
-        /* Efecto de difuminado en el video */
         .video-container::before {
             content: '';
             position: absolute;
@@ -478,7 +468,6 @@
             overflow: hidden;
         }
 
-        /* Efecto de difuminado en los bordes de las imágenes */
         .carousel-item::before {
             content: '';
             position: absolute;
@@ -806,24 +795,17 @@
     </style>
 </head>
 <body>
-    <!-- Estrellas de fondo -->
     <div class="stars" id="stars"></div>
-
-    <!-- Flash de explosión -->
     <div class="explosion-flash" id="explosionFlash"></div>
-
-    <!-- Pantalla de carga inicial -->
     <div class="loading-screen" id="loadingScreen"></div>
 
-    <!-- Audio romántico (oculto) -->
     <audio id="romanticAudio" loop>
         <source src="audio/audio.mp3" type="audio/mpeg">
         Tu navegador no soporta el elemento de audio.
     </audio>
 
-    <!-- Pantalla de entrada -->
     <div class="intro-screen" id="introScreen">
-        <div class="intro-name">DANNI NICOLE</div>
+        <div class="intro-name">DANNI NICOLE AND LEO - DAN</div> 
         <div class="heart-container" onclick="openMessage()">
             <div class="heart-glow"></div>
             <div class="beating-heart">💙</div>
@@ -831,7 +813,6 @@
         <div class="tap-text">✨ Toca el corazón ✨</div>
     </div>
 
-    <!-- Contenido principal -->
     <div class="main-content" id="mainContent">
         <div class="container">
             <h1>💙 Un Mensaje Especial Para Ti 💙</h1>
@@ -901,16 +882,64 @@
                 ✨ ¡Has hecho del programador más feliz del mundo! ✨<br>
                 💙 ¡Te amo! 💙
             </div>
+
+            <div class="first-memory" id="firstMemory" style="display: none;">
+                <h2 style="text-align: center; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin: 40px 0 30px 0; font-size: 2.2em; font-weight: 800;">
+                    💙 Nuestro Primer Recuerdo Juntos 💙
+                </h2>
+
+                <div class="phrase">
+                    "13 días después de que aceptaste ser mi compañera, mi novia, mi amiga, mi todo... vivimos este momento que guardé en mi corazón."
+                </div>
+
+                <div class="memory-text" style="background: linear-gradient(135deg, #e0f2ff 0%, #bae6ff 100%); padding: 30px; border-radius: 20px; margin: 25px 0; box-shadow: 0 5px 15px rgba(100, 180, 255, 0.2); border-left: 4px solid #64b4ff;">
+                    <p style="font-size: 1.2em; color: #2c3e50; line-height: 1.8; margin-bottom: 15px; text-align: justify;">
+                        Sabes, hay algo mágico en correr... Es como si con cada paso dejara atrás los miedos y las dudas. Y desde que estás en mi vida, correr tiene un significado completamente nuevo. Ya no solo corro hacia mis metas, corro hacia ti, hacia nosotros, hacia ese futuro que quiero construir a tu lado.
+                    </p>
+                    <p style="font-size: 1.2em; color: #2c3e50; line-height: 1.8; margin-bottom: 15px; text-align: justify;">
+                        Amo correr, pero ¿sabes qué amo más? Correr contigo. Porque cuando estamos juntos, cada zancada se siente más liviana, cada respiración tiene más sentido, y cada kilómetro es un nuevo recuerdo que guardo en mi alma. Tú eres lo mejor que me está pasando, y quiero que sepas que correr no está mal... es liberador, es vida, es pasión.
+                    </p>
+                    <p style="font-size: 1.2em; color: #2c3e50; line-height: 1.8; text-align: justify;">
+                        Sí, tengo miedos. Miedo de no ser suficiente, miedo de que las cosas cambien, miedo de tropezar en este camino... Pero hay algo que sé con certeza: quiero enfrentar esos miedos contigo. Porque cuando estás a mi lado, todo parece posible. Tú me das la fuerza que necesito para seguir adelante, para correr más rápido, para soñar más alto.
+                    </p>
+                    <p style="font-size: 1.3em; color: #1e3c72; line-height: 1.8; font-weight: 600; text-align: center; margin-top: 20px; font-style: italic;">
+                        Gracias por correr esta carrera llamada vida junto a mí. Eres mi compañera perfecta, mi motivación más grande, mi amor más sincero. 💙
+                    </p>
+                </div>
+
+                <div class="carousel-container" style="margin-top: 30px;">
+                    <div class="carousel" id="memoryCarousel">
+                        <div class="carousel-item">
+                            <img src="img/recuerdo1.jpeg" alt="Primer recuerdo 1">
+                            <div class="carousel-description">El inicio de nuestra historia juntos 💙</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/recuerdo2.jpeg" alt="Primer recuerdo 2">
+                            <div class="carousel-description">Cada momento a tu lado es especial ✨</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/recuerdo3.jpeg" alt="Primer recuerdo 3">
+                            <div class="carousel-description">Corriendo juntos hacia nuestros sueños 🏃‍♀️💙</div>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn" onclick="prevMemorySlide()">❮</button>
+                        <button class="carousel-btn" onclick="nextMemorySlide()">❯</button>
+                    </div>
+                </div>
+
+                <div class="phrase" style="margin-top: 30px;">
+                    "Desde ese día 29, cada latido de mi corazón lleva tu nombre... 💙"
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
-      // Referencia al audio romántico y video
         const romanticAudio = document.getElementById('romanticAudio');
         const specialVideo = document.getElementById('specialVideo');
         let audioStarted = false;
         
-        // Crear estrellas
         function createStars() {
             const starsContainer = document.getElementById('stars');
             for (let i = 0; i < 100; i++) {
@@ -924,9 +953,8 @@
         }
         createStars();
 
-        // CONTROL DE AUDIO: Pausar cuando reproduce el video, reanudar cuando termina
         if (specialVideo) {
-      specialVideo.addEventListener('play', () => {
+            specialVideo.addEventListener('play', () => {
                 if (audioStarted && !romanticAudio.paused) {
                     romanticAudio.pause();
                     console.log('Audio de fondo pausado - reproduciendo video');
@@ -948,7 +976,6 @@
             });
         }
 
-        // Crear partícula INSTANTÁNEA
         function createExplosionParticle(emoji, centerX, centerY, waveClass, delay) {
             setTimeout(() => {
                 const particle = document.createElement('div');
@@ -974,12 +1001,10 @@
             }, delay);
         }
 
-        // EXPLOSIÓN INSTANTÁNEA - SIN DEMORA
         function initialExplosion() {
             const centerX = window.innerWidth / 2;
             const centerY = window.innerHeight / 2;
             
-            // Flash INSTANTÁNEO
             const flash = document.getElementById('explosionFlash');
             flash.classList.add('active');
             setTimeout(() => flash.classList.remove('active'), 600);
@@ -992,29 +1017,25 @@
                 '💐', '💫', '🌟', '💕', '🌺'
             ];
             
-            // Oleada 1 - INMEDIATA (30 partículas)
             for (let i = 0; i < 30; i++) {
                 const emoji = particles[Math.floor(Math.random() * particles.length)];                
                 createExplosionParticle(emoji, centerX, centerY, 'wave-1', i * 6);
             }
             
-            // Oleada 2 - suave y romántica (30 partículas)
             for (let i = 0; i < 30; i++) {
                 const emoji = particles[Math.floor(Math.random() * particles.length)];
                 createExplosionParticle(emoji, centerX, centerY, 'wave-2', 400 + i * 10);
             }
             
-            // Oleada 3 - lenta y delicada (20 partículas)
             for (let i = 0; i < 20; i++) {
                 const emoji = particles[Math.floor(Math.random() * particles.length)];
                 createExplosionParticle(emoji, centerX, centerY, 'wave-3', 800 + i * 12);
             }
         }
 
-        // Reproducir audio con interacción del usuario
         function startAudioOnInteraction() {
             if (!audioStarted) {
-                romanticAudio.volume = 0.5; // Volumen al 50%
+                romanticAudio.volume = 0.5;
                 romanticAudio.play().then(() => {
                     audioStarted = true;
                     console.log('Audio romántico iniciado');
@@ -1024,25 +1045,20 @@
             }
         }
 
-        // Detener audio
         function stopRomanticAudio() {
             romanticAudio.pause();
             romanticAudio.currentTime = 0;
             audioStarted = false;
         }
 
-        // Iniciar INMEDIATAMENTE
         window.addEventListener('load', () => {
-            // Explosión comienza INSTANTÁNEAMENTE
             initialExplosion();
             
-            // TIEMPO REDUCIDO - Mostrar intro después de solo 2 segundos
             setTimeout(() => {
                 document.getElementById('loadingScreen').classList.add('hidden');
                 document.getElementById('introScreen').classList.add('active');
             }, 2000);
 
-            // Intentar reproducir audio (puede fallar en algunos navegadores)
             romanticAudio.volume = 0.5;
             const playPromise = romanticAudio.play();
             
@@ -1056,17 +1072,13 @@
             }
         });
 
-        // INICIAR AUDIO CON CUALQUIER INTERACCIÓN DEL USUARIO
         document.addEventListener('click', startAudioOnInteraction, { once: false });
         document.addEventListener('touchstart', startAudioOnInteraction, { once: false });
         document.addEventListener('keydown', startAudioOnInteraction, { once: false });
 
-        // Abrir mensaje principal
         function openMessage() {
-            // Asegurar que el audio esté reproduciéndose
             startAudioOnInteraction();
             
-            // DETENER el audio cuando presiona el corazón
             setTimeout(() => {
                 stopRomanticAudio();
             }, 500);
@@ -1079,7 +1091,6 @@
             }, 800);
         }
 
-        // Crear corazones flotantes románticos
         function createHeart() {
             const heart = document.createElement('div');
             heart.className = 'heart';
@@ -1098,10 +1109,9 @@
             heartsInterval = setInterval(createHeart, 300);
         }
 
-        // Carrusel
         let currentSlide = 0;
         const carousel = document.getElementById('carousel');
-        const totalSlides = document.querySelectorAll('.carousel-item').length;
+        const totalSlides = document.querySelectorAll('#carousel .carousel-item').length;
 
         function updateCarousel() {
             carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
@@ -1122,25 +1132,52 @@
             carouselInterval = setInterval(nextSlide, 6000);
         }
 
-        // Mover botón "No"
+        let currentMemorySlide = 0;
+        const memoryCarousel = document.getElementById('memoryCarousel');
+        let totalMemorySlides = 0;
+        let memoryCarouselInterval;
+
+        function updateMemoryCarousel() {
+            if (memoryCarousel) {
+                memoryCarousel.style.transform = `translateX(-${currentMemorySlide * 100}%)`;
+            }
+        }
+
+        function nextMemorySlide() {
+            if (totalMemorySlides > 0) {
+                currentMemorySlide = (currentMemorySlide + 1) % totalMemorySlides;
+                updateMemoryCarousel();
+            }
+        }
+
+        function prevMemorySlide() {
+            if (totalMemorySlides > 0) {
+                currentMemorySlide = (currentMemorySlide - 1 + totalMemorySlides) % totalMemorySlides;
+                updateMemoryCarousel();
+            }
+        }
+
+        function startMemoryCarousel() {
+            totalMemorySlides = document.querySelectorAll('#memoryCarousel .carousel-item').length;
+            if (totalMemorySlides > 0) {
+                memoryCarouselInterval = setInterval(nextMemorySlide, 6000);
+            }
+        }
+
         function moveNoButton() {
             const btnNo = document.getElementById('btnNo');
             
-            // Obtener dimensiones disponibles
             const maxX = window.innerWidth - btnNo.offsetWidth - 40;
             const maxY = window.innerHeight - btnNo.offsetHeight - 40;
             
-            // Generar posición aleatoria
             const randomX = Math.random() * maxX;
             const randomY = Math.random() * maxY;
             
-            // Aplicar posición fija en la ventana
             btnNo.style.position = 'fixed';
             btnNo.style.left = randomX + 'px';
             btnNo.style.top = randomY + 'px';
         }
 
-        // Crear partícula romántica para celebración
         function createRomanticParticle(emoji, startX, startY) {
             const particle = document.createElement('div');
             particle.style.position = 'fixed';
@@ -1190,7 +1227,6 @@
             }, 3000);
         }
 
-        // Respuestas - ANIMACIÓN SUAVE Y ROMÁNTICA
         function sayYes() {
             document.getElementById('celebration').style.display = 'block';
             document.querySelector('.answer-buttons').style.display = 'none';
@@ -1198,15 +1234,12 @@
             const centerX = window.innerWidth / 2;
             const centerY = window.innerHeight / 2;
             
-            // ANIMACIÓN ROMÁNTICA SUAVE
-            // Oleada 1 - Corazones flotantes suaves (40 corazones)
             for (let i = 0; i < 40; i++) {
                 setTimeout(() => {
                     createHeart();
                 }, i * 120);
             }
             
-            // Oleada 2 - Partículas románticas desde el centro (30 partículas)
             const romanticEmojis = ['💙', '💕', '✨', '💫', '🌸'];
             for (let i = 0; i < 30; i++) {
                 setTimeout(() => {
@@ -1215,20 +1248,24 @@
                 }, i * 100);
             }
             
-            // Oleada 3 - Corazones adicionales más lentos (30 corazones)
             for (let i = 0; i < 30; i++) {
                 setTimeout(() => {
                     createHeart();
                 }, 3000 + i * 150);
             }
             
-            // Oleada 4 - Partículas finales delicadas (20 partículas)
             for (let i = 0; i < 20; i++) {
                 setTimeout(() => {
                     const emoji = romanticEmojis[Math.floor(Math.random() * romanticEmojis.length)];
                     createRomanticParticle(emoji, centerX, centerY);
                 }, 3500 + i * 120);
             }
+
+            setTimeout(() => {
+                document.getElementById('firstMemory').style.display = 'block';
+                document.getElementById('firstMemory').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                startMemoryCarousel();
+            }, 2000);
         }
     </script>
 </body>
